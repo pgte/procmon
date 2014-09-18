@@ -1,0 +1,26 @@
+{
+  "name": "procmon",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "browserify": "node_modules/.bin/browserify js/procmon.js -o public/js/procmon.js"
+  },
+  "dependencies": {
+    "duplex-emitter": "^2.1.2",
+    "file": "^0.2.2",
+    "json-duplex-stream": "^1.1.0",
+    "reconnect-core": "^0.2.0",
+    "restify": "^2.8.2",
+    "sane": "^0.6.0",
+    "usage": "^0.4.12",
+    "watch": "^0.11.0",
+    "websocket-stream": "^0.6.0",
+    "ws": "^0.4.32"
+  },
+  "devDependencies": {
+    "browserify": "^5.10.0"
+  }
+}

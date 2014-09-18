@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/epoch.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" style="background: black; color: white; height: 120px">
+          <h1>Procmon</h1>
+        </div>
+        <div class="col-md-4">
+          <form role="form" id="control">
+            <div class="form-group">
+              <label for="pid">PID</label>
+              <input type="text" class="form-control" id="pid" placeholder="Enter PID">
+            </div>
+            <button type="submit" class="btn btn-default start">Monitor</button>
+            <button type="submit" class="btn btn-default stop">Stop</button>
+            <button type="submit" class="btn btn-default clear">Clear</button>
+          </form>
+        </div>
+        <div class="col-md-4" style="padding: 1em">
+          <div class="alert alert-info" id="alert" role="alert"></div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-md-4">
+          <h2>Memory</h2>
+          <div id="chart-mem" class="epoch category20" style="width: 300px; height: 150px"></div>
+        </div>
+
+        <div class="col-md-4">
+          <h2>CPU</h2>
+          <div id="chart-cpu" class="epoch category20b" style="width: 300px; height: 150px"></div>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Event Loop Lag</h2>
+          <div id="chart-lag" class="epoch category10" style="width: 300px; height: 150px"></div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <h3>Files</h3>
+        <ul id="files"></ul>
+      </div>
+    </div>
+
+
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/d3.js"></script>
+    <script src="/js/epoch.js"></script>
+    <script src="/js/procmon.js"></script>
+  </body>
+</html>
