@@ -16,7 +16,7 @@ function createServer(options) {
   wsServer.on('connection', websocket);
 
   /// routes
-  var routes = require('./routes');
+  var routes = require('./routes')(options);
 
   routes.forEach(function(route) {
     server[route.method.toLowerCase()]({

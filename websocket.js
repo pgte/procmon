@@ -46,13 +46,13 @@ function createWebsocket(options) {
       if (! interval) {
         interval = setInterval(poll, pollInterval);
 
-        lagConn = net.connect('/tmp/busy-' + pid + '.sock');
-        lagConn.on('error', function(err) {
-          err.message = 'Error connecting to event loop lag server: ' + err.message;
+        agentConn = net.connect('/tmp/procmon-agent-' + pid + '.sock');
+        agentConn.on('error', function(err) {
+          err.message = 'Error connecting to procmon agent: ' + err.message;
           e.emit('warning', err.message);
         });
 
-        lagConn.once('close', function() {
+        agentConn.once('close', function() {
           lagConn = undefined;
         });
 
@@ -60,7 +60,7 @@ function createWebsocket(options) {
         json.on('error', function() {
           s.destroy();
         });
-        lagConn.pipe(json).on('data', onLagData);
+        agentConn.pipe(json).on('data', onLagData);
 
       }
     }

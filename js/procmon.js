@@ -169,7 +169,7 @@ function onFileAdded(f) {
   if (! f) return;
   if (list[f]) return;
   console.log('file added (2):', f);
-  var elem = $('<li><a target="_blank" href="/out/' + encodeURIComponent(f) + '">' + f + '</a></li>');
+  var elem = $('<li><a target="_blank" href="/' + f + '">' + f + '</a></li>');
   list[f] = elem;
   $files.prepend(elem);
 }
