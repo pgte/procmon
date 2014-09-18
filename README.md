@@ -2,7 +2,9 @@
 
 Local process monitor. Monitors and graphs memory, CPU and event loop lag.
 
-Also exposes a public dir (which I find useful when tracing on staging systems).
+Meant to be used in testing / staging environments.
+
+Also exposes a public dir, which I find useful when producing tracing files.
 
 
 ## Install
