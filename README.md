@@ -26,7 +26,7 @@ You can monitor CPU and memory by providing a PID and pressing the "Monitor" but
 
 ## Monitor event loop lag
 
-You can monitor the node event loop lag on a target process by installing and requiring the `[procmon-agent](https://github.com/pgte/node-procmon-agent)` module on the project:
+You can monitor the Node event loop lag on a target process by installing and requiring the [procmon-agent](https://github.com/pgte/node-procmon-agent) module on the project:
 
 ```bash
 $ npm install procmon-agent
