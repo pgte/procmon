@@ -22,12 +22,10 @@ function fileWatch(monitorPath, remote) {
 
     monitor.on('removed', function(f) {
       f = resolvePath(f);
-      console.log('file deleted:', f);
       if (validFile(f)) remote.emit('file removed', f);
     });
 
   });
-  console.log('started watching %s', monitorPath);
 
   return {
     stop: stop

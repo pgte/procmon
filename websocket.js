@@ -14,7 +14,7 @@ function createWebsocket(options) {
   if (options.public)
     monitorPath = path.normalize(path.join(process.cwd(), options.public));
 
-  var pollInterval = 3e3;
+  var pollInterval = options.pollInterval || 3e3;
 
   return websocket;
 
