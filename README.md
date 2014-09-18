@@ -2,6 +2,9 @@
 
 Local process monitor. Monitors and graphs memory, CPU and event loop lag.
 
+Also exposes a public dir (which I find useful when tracing on staging systems).
+
+
 ## Install
 
 ```bash
