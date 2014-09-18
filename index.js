@@ -1,5 +1,12 @@
-var server = require('./server');
+#!/usr/bin/env node
+
+var argv = require('minimist')(process.argv.slice(2));
+var publicPath = argv.public;
+
+var server = require('./server')(argv);
 
 server.listen(8887, function() {
-  console.log('procmon server PID (%s) listening on port %j', process.pid, server.address());
+  console.log(
+    'Procmon server PID (%s) listening on:\n%j',
+    process.pid, server.address());
 });

@@ -8,10 +8,14 @@
     "start": "node .",
     "browserify": "node_modules/.bin/browserify js/procmon.js -o public/js/procmon.js"
   },
+  "bin": {
+    "procmon-server": "index.js"
+  },
   "dependencies": {
     "duplex-emitter": "^2.1.2",
     "file": "^0.2.2",
     "json-duplex-stream": "^1.1.0",
+    "minimist": "^1.1.0",
     "reconnect-core": "^0.2.0",
     "restify": "^2.8.2",
     "sane": "^0.6.0",

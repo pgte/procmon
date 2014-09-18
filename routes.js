@@ -1,12 +1,11 @@
 var restify = require('restify');
 var join = require('path').join;
-var websocket = require('./websocket');
 
 module.exports = [
   {
     method: 'GET',
     path: '/websocket',
-    handler: websocket.noop
+    handler: function() {}
   },
   {
     method: 'GET',
