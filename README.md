@@ -1,6 +1,6 @@
 # Procmon
 
-Local process monitor. Monitors and graphs memory, CPU and event loop lag.
+Local process monitor with a web UI. Monitors and graphs memory, CPU and event loop lag.
 
 Meant to be used in testing / staging environments.
 
