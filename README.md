@@ -1,3 +1,5 @@
+# Not maintained
+
 # Procmon
 
 Local process monitor with a web UI. Monitors and graphs memory, CPU and event loop lag.
